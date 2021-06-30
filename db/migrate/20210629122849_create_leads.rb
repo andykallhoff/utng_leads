@@ -9,10 +9,10 @@ class CreateLeads < ActiveRecord::Migration[6.1]
       t.string :city
       t.string :state
       t.integer :zip
+      t.boolean :active_contact, default: true
+      t.boolean :is_army, default: false
       t.text :comment
       t.text :note
-
-      t.timestamps
 
       t.timestamps
     end
