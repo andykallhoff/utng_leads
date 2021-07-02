@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2021_06_29_122849) do
   create_table "leads", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
+    t.integer "gender", default: 0
+    t.integer "age", default: 18
     t.string "email"
     t.string "phone_number"
     t.string "street"

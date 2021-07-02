@@ -1,0 +1,15 @@
+<header class="fixed-top">
+  <%= link_to root_path, class: 'navbar-brand' do %>
+    <div class='logo'>
+      <%= image_tag 'utng-logo.png', alt: 'UTNG', style: 'width: 100%;' %>
+    </div>
+    <div class='text'>
+      <b>Utah National Guard</b>
+      <br>
+      <small class='text-muted'>Recruiting</small>
+    </div>
+  <% end %>
+
+  <%= link_to 'I Want In', interested_path, class: 'btn btn-primary interested' %>
+</header>
+<br class='clearfix'>

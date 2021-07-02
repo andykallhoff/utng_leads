@@ -1,0 +1,89 @@
+@import "bootstrap";
+
+$light-black: #141414;
+$yellow: #ffc000;
+$yellow-hover: #e0af26;
+$gold: #F7C44D;
+$gold-hover: #e0af26;
+$white: #FFFFFF;
+$gray: #6F6F6F;
+$grey: #6F6F6F;
+$grey-brown: #595950;
+$blue: #417BA9;
+$background: #1F1E22;
+
+.btn-primary {
+  background-color: $yellow;
+  border: 0;
+
+  &:hover {
+    background-color: $yellow-hover;
+    border: 0;
+  }
+}
+
+body {
+  background: $background;
+  color: $white;
+
+  .content {
+    margin-top: 100px;
+  }
+}
+
+.clearfix {
+  display: block;
+  clear: both;
+}
+
+.card {
+  background: $background;
+}
+
+label.required::after {
+  content: ' *';
+  color: $yellow;
+}
+
+select.form-control {
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  appearance: auto;
+}
+
+
+
+
+header {
+  background: $background;
+  height: 100px;
+  padding: 5px 15px;
+  box-shadow: 0 0 2px $gold;
+
+  a.navbar-brand {
+    padding-top: 50px;
+
+    .logo {
+      float: left;
+      width: 90px;
+      img { width: 100%; }
+    }
+
+    .text {
+      float: left;
+      padding: 25px 0 0 10px;
+      color: $white;
+
+      small {
+        display: block;
+        margin-top: -7px;
+      }
+    }
+  }
+
+  a.interested {
+    float: right;
+    padding: 5px 15px;
+    margin-top: 27px;
+  }
+}
