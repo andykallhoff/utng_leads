@@ -22,13 +22,21 @@ $background: #1F1E22;
   }
 }
 
+.btn-outline-primary {
+  color: $yellow;
+  border-color: $yellow;
+
+  &:hover {
+    background-color: $yellow;
+    border-color: $yellow;
+  }
+}
+
+
+
 body {
   background: $background;
   color: $white;
-
-  .content {
-    margin-top: 100px;
-  }
 }
 
 .clearfix {
@@ -45,45 +53,23 @@ label.required::after {
   color: $yellow;
 }
 
-select.form-control {
-  -webkit-appearance: auto;
-  -moz-appearance: auto;
-  appearance: auto;
-}
-
-
-
 
 header {
-  background: $background;
-  height: 100px;
-  padding: 5px 15px;
-  box-shadow: 0 0 2px $gold;
-
-  a.navbar-brand {
-    padding-top: 50px;
-
-    .logo {
-      float: left;
-      width: 90px;
-      img { width: 100%; }
-    }
-
-    .text {
-      float: left;
-      padding: 25px 0 0 10px;
-      color: $white;
-
-      small {
-        display: block;
-        margin-top: -7px;
-      }
-    }
+  .logo {
+    width: 65px;
+    height: 65px;
+    margin-right: 8px;
+  }
+  .logo-text {
+    color: $white;
   }
 
-  a.interested {
-    float: right;
-    padding: 5px 15px;
-    margin-top: 27px;
+  ul.nav {
+    .nav-link {
+      color: $white;
+      &:hover {
+        color: $gold;
+      }
+    }
   }
 }

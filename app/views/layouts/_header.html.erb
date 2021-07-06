@@ -1,15 +1,21 @@
-<header class="fixed-top">
-  <%= link_to root_path, class: 'navbar-brand' do %>
+<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+  <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
     <div class='logo'>
       <%= image_tag 'utng-logo.png', alt: 'UTNG', style: 'width: 100%;' %>
     </div>
-    <div class='text'>
-      <b>Utah National Guard</b>
+    <div class='logo-text'>
+      <b>Utah Army National Guard</b>
       <br>
       <small class='text-muted'>Recruiting</small>
     </div>
-  <% end %>
+  </a>
 
-  <%= link_to 'I Want In', interested_path, class: 'btn btn-primary interested' %>
+  <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+    <li><a href="/" class="nav-link px-2">Home</a></li>
+    <li><a href="/more-info" class="nav-link px-2">More Info</a></li>
+  </ul>
+
+  <div class="col-md-3 text-end">
+    <%= link_to 'I Want In', interested_path, class: 'btn btn-primary interested' %>
+  </div>
 </header>
-<br class='clearfix'>
