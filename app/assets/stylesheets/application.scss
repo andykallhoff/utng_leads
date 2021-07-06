@@ -53,6 +53,21 @@ label.required::after {
   color: $yellow;
 }
 
+table.table {
+  tr {
+    td {
+      a {
+        color: $gold;
+        text-decoration: none;
+
+        &:hover {
+          color: $gold-hover;
+        }
+      }
+    }
+  }
+}
+
 
 header {
   .logo {
