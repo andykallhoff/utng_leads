@@ -1,4 +1,5 @@
 class LeadsController < ApplicationController
+  before_action :authenticate_user!, except: %i[interested thank_you create]
   before_action :set_lead, except: %i[interested thank_you index new create]
 
   def interested
@@ -40,7 +41,9 @@ class LeadsController < ApplicationController
   end
 
   def destroy
+    name = @lead.full_name
     @lead.destroy
+    redirect_to leads_path, success: "Successfully removed #{name}."
   end
 
   private

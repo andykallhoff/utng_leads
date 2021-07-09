@@ -15,6 +15,14 @@
       <%= render '/layouts/header' %>
 
       <div class="content">
+        <% flash.each do |type, message| %>
+          <div class="alert <%= flash_message_class(type) %>">
+            <strong><%= type.capitalize %>!</strong> <%= message.html_safe %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="content">
         <%= yield %>
       </div>
     </div>

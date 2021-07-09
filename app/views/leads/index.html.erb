@@ -16,6 +16,7 @@
           <th>Zip</th>
           <th class='text-center'>Active?</th>
           <th class='text-center'>Recruited?</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -31,6 +32,13 @@
             <td><%= lead&.zip %></td>
             <td class='text-center'><%= lead.active_contact ? "&#10003;".html_safe : '' %></td>
             <td class='text-center'><%= lead.is_army ? "&#10003;".html_safe : '' %></td>
+            <td>
+              <div class="btn-group">
+                <%= link_to 'edit', edit_lead_path(lead), class: 'btn btn-sm btn-primary' %>
+                <%= link_to 'delete', lead_path(lead), method: 'delete', class: 'btn btn-sm btn-danger',
+                            data: {confirm: "Do you want to delete #{lead&.full_name}?"} %>
+              </div>
+            </td>
           </tr>
         <% end %>
       </tbody>

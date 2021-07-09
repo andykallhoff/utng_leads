@@ -13,4 +13,13 @@ module ApplicationHelper
     # for foreign numbers
     number_to_phone(number, pattern: /(\d{1,4})(\d{4})(\d{4})$/, delimiter: '-')
   end
+
+  def flash_message_class(type)
+    case type
+      when 'notice' then "alert alert-info"
+      when 'success' then "alert alert-success"
+      when 'warning' then "alert alert-warning"
+      when 'error', 'danger' then "alert alert-danger"
+    end
+  end
 end

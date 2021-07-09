@@ -13,6 +13,10 @@
   <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
     <li><a href="/" class="nav-link px-2">Home</a></li>
     <li><a href="/more-info" class="nav-link px-2">More Info</a></li>
+
+    <% if current_user %>
+      <li><a href="/leads" class="nav-link px-2">Leads</a></li>
+    <% end %>
   </ul>
 
   <div class="col-md-3 text-end">

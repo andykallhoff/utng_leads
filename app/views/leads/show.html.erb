@@ -1,2 +1,18 @@
-<h1>Showing <%= @lead.first_name %></h1>
-<%= @lead.inspect %>
+<h1>Showing <%= @lead&.full_name %></h1>
+
+<% @lead.attributes.reject{|a| %w[id updated_at].include?(a)}.each do |attr, val| %>
+  <div class="row">
+    <div class="col-md-2">
+      <b><%= attr&.titleize %>:</b>
+    </div>
+    <div class="col-md-10">
+      <% if val.is_a?(Time) %>
+        <%= val.strftime('%d %b %Y') %>
+      <% elsif attr == 'phone_number' %>
+        <%= display_phone(val) %>
+      <% else %>
+        <%= val %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

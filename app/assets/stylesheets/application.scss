@@ -15,10 +15,12 @@ $background: #1F1E22;
 .btn-primary {
   background-color: $yellow;
   border: 0;
+  color: $white;
 
   &:hover {
     background-color: $yellow-hover;
     border: 0;
+    color: $white;
   }
 }
 
@@ -32,6 +34,9 @@ $background: #1F1E22;
   }
 }
 
+.btn {
+  color: $white !important;
+}
 
 
 body {
